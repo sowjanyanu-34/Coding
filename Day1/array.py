@@ -6,7 +6,7 @@ max_val=arr[0]
 for i in arr:
     if i>max_val:
         max_val=i
-print(max_val)
+print("Maximum element in the list:",max_val)
 
 #2.Minimum element in an array
 arr=list(map(int,input("Enter the value of list:").split()))
@@ -29,3 +29,18 @@ for i in arr:
     if i>min_val:
         min_val=i
 print(max_val-min_val)
+
+# 5. Sum of all elements in an array
+arr=list(map(int,input("Enter the list:").split()))
+total=0
+for i in arr:
+    total+=i
+print("The sum of all elements in an array is:",total)
+
+# 6. Sum of even elements in an array
+arr=list(map(int,input("Enter the list:").split()))
+total=0
+for i in arr:
+    if i%2==0:
+        total+=i
+print("The sum of all elements in an array is:",total)
