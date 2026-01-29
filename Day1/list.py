@@ -45,3 +45,4 @@ print("Second largest element in the list is:",arr[-2])
 arr=list(map(int,input("Enter the list:").split()))
 x=int(input("Enter the element count:"))
 print("Count frequency:",arr.count(x))
+
