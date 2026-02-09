@@ -14,3 +14,13 @@ from collections import Counter
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         return Counter(s) == Counter(t)
+    
+#Two Sum (Leetcode 1)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = {}   # number -> index
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in seen:
+                return [seen[complement], i]
+            seen[num] = i
