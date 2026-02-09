@@ -1,6 +1,9 @@
 # Array is an data structure which is a collection of elements stored contigously
 
 # 1.Maximum element in an array
+from operator import le
+
+
 arr=list(map(int,input("Enter the value of list:").split()))
 max_val=arr[0]
 for i in arr:
@@ -118,3 +121,105 @@ freq={}
 for x in arr:
     freq[x]=freq.get(x,0)+1
 print("The frequency of element is:",freq)
+
+#print positive negative or zero
+n=int(input("Enter a number:"))
+if n>0:
+    print("Positive")
+elif n<0:
+    print("Negative")
+else:
+    print("Zero")
+
+#Even or Odd
+n=int(input("Enter a n:"))
+if n%2==0:
+    print("Even")
+else:
+    print("Odd")
+
+# Comapre two number
+a=int(input("enter the value of a:"))
+b=int(input("Enter the value of b:"))
+if a>b:
+    print("a is greater")
+elif a<b:
+    print("b is greater")
+else:
+    print("Equal")
+
+#Check string is empty or not
+s=int("Enter a string:")
+if len(s)==0:
+    print("String is empty")
+else:
+    print("String is not empty")
+
+# print first charcter is vowel or constant
+s=input("ENter the string:")
+if len(s)==0:
+    print("empty string")
+else:
+    ch=s.lower()
+    if ch in ['a','e','i','o','u']:
+        print("Vowel")
+    else:
+        print("constant")
+
+#String length
+s=int("Enter a string:")
+if len(s)>5:
+    print("greater than 5")
+else:
+    print("less than or equal to 5")
+
+#Print 1 to N
+n=int(input("Enter a number"))
+for i in range(1,n+1):
+    print(i)
+
+#Sum of N Numbers
+n=int(input("Enter the value of n:"))
+i=1
+total=0
+while i<=n:
+    total+=i
+    i+=1
+print("Sum=",total)
+
+#Factorial of a number
+n=int(input("Enter the value of n:"))
+fact=1
+for i in range(1,n+1):
+    fact=fact*i
+print(fact)
+
+#Reverse a number
+arr=[1,2,3,4,5]
+l=0
+r=len(arr)-1
+while l<r:
+    arr[l],arr[r]=arr[r],arr[l]
+    l+=1
+    r-=1
+print(arr)
+
+#Reverse a number
+n = int(input("Enter number: "))
+rev = 0
+while n > 0:
+    digit = n % 10
+    rev = rev * 10 + digit
+    n = n // 10
+print("Reversed number =", rev)
+
+#Count the number of digits in a number
+n = int(input("Enter number: "))
+count = 0
+while True:
+    count += 1
+    n = n // 10
+    if n == 0:
+        break
+print("Number of digits =", count)
+
