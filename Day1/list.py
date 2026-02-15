@@ -6,7 +6,7 @@ print("The enterd list is:",arr)
 arr=list(map(int,input("Enter the list:").split()))
 print(max(arr))
 
-# 3.FIND MIN ELEMENT
+# 3.FIND MIN ELEMENT in an array
 arr=list(map(int,input("Enter the list:").split()))
 print(min(arr))
 
