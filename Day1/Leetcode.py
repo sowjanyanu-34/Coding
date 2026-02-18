@@ -39,7 +39,7 @@ class Solution:
             else:
                 r-=1
 
-# Move Zeros leetcode 283
+# Move Zeros (leetcode 283)
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         insertPos = 0
