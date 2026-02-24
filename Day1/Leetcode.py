@@ -102,3 +102,20 @@ class Solution:
                 l+=1
             else:
                 r-=1
+        return max_area
+    
+#Valid Palindrome (Leetcode 125)
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        filter=[]
+        for ch in s:
+            if ch.isalnum():
+                filter.append(ch.lower())
+        l=0
+        r=len(filter)-1
+        while l<r:
+            if filter[l]!=filter[r]:
+                return False
+            l+=1
+            r-=1
+        return True
