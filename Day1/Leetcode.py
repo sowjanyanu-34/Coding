@@ -120,3 +120,20 @@ class Solution:
             r-=1
         return True
     
+# leetcode 1423 Maximum Points You Can Obtain from Cards
+class Solution:
+    def maxScore(self, cardPoints: List[int], k: int) -> int:
+        n=len(cardPoints)
+        lsum=0
+        rsum=0
+        maxsum=0
+        for i in range(k):
+            lsum=cardPoints[i]
+        maxsum=lsum
+        rindex=n-1
+        for i in range(k-1,-1,-1):
+            lsum-=cardPoints[i]
+            rsum+=cardPoints[rindex]
+            rindex-=1
+            maxsum=max(maxsum,lsum+rsum)
+        return maxsum
