@@ -104,7 +104,7 @@ class Solution:
                 r-=1
         return max_area
     
-#Valid Palindrome (Leetcode 125)
+#Valid Palindrome (Leetcode 125):
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         filter=[]
