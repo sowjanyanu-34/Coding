@@ -153,3 +153,17 @@ class Solution:
                 l+=1
             max_fruits=max(max_fruits,r-l+1)
         return max_fruits
+
+# 643 Maximum Average Subarray I
+class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        w=0
+        for i in range(k):
+            w+=nums[i]
+        max_s=w
+        for i in range(k,len(nums)):
+           w+=nums[i]
+           w-=nums[i-k]
+           if w>max_s:
+            max_s=w
+        return max_s/k
