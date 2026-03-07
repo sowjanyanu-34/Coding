@@ -8,7 +8,7 @@ It serves as a personal learning log as well as a reference for revisiting core 
 
 ---
 
-## 📂 Repository Contents
+##  Repository Contents
 
 The repository currently includes programs related to:
 
