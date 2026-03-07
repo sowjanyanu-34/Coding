@@ -12,7 +12,7 @@ It serves as a personal learning log as well as a reference for revisiting core 
 
 The repository currently includes programs related to:
 
-* 🐍 **Python Basics** – syntax, variables, input/output
+*  **Python Basics** – syntax, variables, input/output
 * 🔁 **Control Statements** – loops, conditionals, and flow control
 * 🧩 **Data Structures** – lists, tuples, dictionaries, sets
 * 🧠 **Logical & Practice Problems** – problem-solving and thinking-based questions
