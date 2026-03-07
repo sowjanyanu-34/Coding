@@ -1,4 +1,4 @@
-# 🧠 Coding – Daily Programming Practice
+# Coding – Daily Programming Practice
 
 ## 📌 Overview
 
