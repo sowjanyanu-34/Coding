@@ -1,6 +1,6 @@
-# Coding – Daily Programming Practice
+#  Coding – Daily Programming Practice
 
-## 📌 Overview
+##  Overview
 
 This repository is a structured collection of my **daily coding practice programs**, focused on building strong problem-solving skills and maintaining consistency in programming.
 
