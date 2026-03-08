@@ -14,7 +14,7 @@ The repository currently includes programs related to:
 
 *  **Python Basics** – syntax, variables, input/output
 *  **Control Statements** – loops, conditionals, and flow control
-* 🧩 **Data Structures** – lists, tuples, dictionaries, sets
+*  **Data Structures** – lists, tuples, dictionaries, sets
 * 🧠 **Logical & Practice Problems** – problem-solving and thinking-based questions
 
 Programs are organized in a simple and readable manner for easy navigation.
