@@ -21,7 +21,7 @@ Programs are organized in a simple and readable manner for easy navigation.
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * **Python**
 
