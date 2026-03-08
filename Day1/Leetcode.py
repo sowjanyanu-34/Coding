@@ -211,3 +211,13 @@ class Solution:
             else:
                 count-=1
         return ele
+
+#leetcode 451 Sort Characters By Frequency
+from collections import Counter
+class Solution:
+    def frequencySort(self, s: str) -> str:
+        freq=Counter(s)
+        result=""
+        for ch,count in freq.most_common():
+            result+=ch*count
+        return result        
