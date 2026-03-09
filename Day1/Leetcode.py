@@ -244,3 +244,21 @@ class Solution:
             c_s=max(nums[i],c_s+nums[i])
             m_s=max(c_s,m_s)
         return m_s
+    
+#leetcode 152 Maximum product subarray
+from typing import List
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        p=1
+        s=1
+        ans=float('-inf')
+        n=len(nums)
+        for i in range(n):
+            if p==0:
+                p=1
+            if s==0:
+                s=1
+            p*=nums[i]
+            s*=nums[n-i-1]
+            ans=max(ans,p,s)
+        return ans
