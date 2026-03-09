@@ -221,3 +221,16 @@ class Solution:
         for ch,count in freq.most_common():
             result+=ch*count
         return result        
+
+#longest consecutive sequence (leetcode 128)
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        numSet=set(nums)
+        long=0
+        for n in numSet:
+            if n-1 not in numSet:
+                len=1
+                while n+len in numSet:
+                    len+=1
+                long=max(long,len)
+        return long
