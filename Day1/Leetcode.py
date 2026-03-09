@@ -234,3 +234,13 @@ class Solution:
                     len+=1
                 long=max(long,len)
         return long
+
+#leetcode 53 Maximum Subarray
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        m_s=nums[0]
+        c_s=nums[0]
+        for i in range(1,len(nums)):
+            c_s=max(nums[i],c_s+nums[i])
+            m_s=max(c_s,m_s)
+        return m_s
