@@ -277,3 +277,22 @@ class Solution:
             min_sum=min(min_sum,c_min)
         return max(max_sum,abs(min_sum))
 
+#leetcode  918 Maximum Sum Circular Subarray
+class Solution:
+    def maxSubarraySumCircular(self, nums: List[int]) -> int:
+        total=0
+        c_max=0
+        c_min=0
+        max_sum=nums[0]
+        min_sum=nums[0]
+        for num in nums:
+            total+=num
+            c_max=max(num,num+c_max)
+            max_sum=max(max_sum,c_max)
+            c_min=min(num,num+c_min)
+            min_sum=min(min_sum,c_min)
+        if total<0:
+            return max_sum
+        return max(max_sum,total-min_sum)
+
+
