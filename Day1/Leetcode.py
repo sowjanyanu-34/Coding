@@ -262,3 +262,18 @@ class Solution:
             s*=nums[n-i-1]
             ans=max(ans,p,s)
         return ans
+    
+#Leetcode 1749 Maximum Absolute Sum of Any Subarray
+class Solution: 
+    def maxAbsoluteSum(self, nums: List[int]) -> int:
+        max_sum=0
+        min_sum=0
+        c_max=0
+        c_min=0
+        for n in nums:
+            c_max=max(n,c_max+n)
+            c_min=min(n,c_min+n)
+            max_sum=max(max_sum,c_max)
+            min_sum=min(min_sum,c_min)
+        return max(max_sum,abs(min_sum))
+
