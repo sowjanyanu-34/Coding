@@ -235,6 +235,8 @@ class Solution:
                 long=max(long,len)
         return long
 
+
+### Kadane's Algorithm
 #leetcode 53 Maximum Subarray
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
@@ -294,7 +296,8 @@ class Solution:
         if total<0:
             return max_sum
         return max(max_sum,total-min_sum)
-
+    
+### Recursion
 # 509 Fibonacci Number
 class Solution: 
     def fib(self, n: int) -> int:
