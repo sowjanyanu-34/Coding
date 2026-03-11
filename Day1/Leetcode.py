@@ -218,8 +218,8 @@ class Solution:
     def frequencySort(self, s: str) -> str:
         freq=Counter(s)
         result=""
-        for ch,count in freq.most_common():
-            result+=ch*count
+        for ch,countt in freq.most_common():
+            result+=ch*countt
         return result        
 
 #longest consecutive sequence (leetcode 128)
