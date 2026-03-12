@@ -316,3 +316,15 @@ class Solution:
           s[l],s[r]=s[r],s[l]
           l+=1
           r-=1
+
+##Prefix Sum
+#724 Find Pivot Index
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        total_s=sum(nums)
+        left_s=0
+        for i in range(len(nums)):
+            if left_s==total_s-left_s-nums[i]:
+                return i
+            left_s+=nums[i]
+        return -1
