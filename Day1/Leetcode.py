@@ -328,3 +328,15 @@ class Solution:
                 return i
             left_s+=nums[i]
         return -1
+    
+#Find the middle index in array (leetcode 1991)
+class Solution:
+    def findMiddleIndex(self, nums: List[int]) -> int:
+        total_s=sum(nums)
+        left_s=0
+        for i in range(len(sum)):
+            if left_s==total_s-left_s-nums[i]:
+                return i
+            left_s+=nums[i]
+        return -1
+    
