@@ -353,3 +353,20 @@ class Solution:
             r*=nums[i]
         return ans
 
+
+# 523 Leetcode Continuous Subarray Sum
+class Solution:
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        prefix_s=0
+        mpp={0:-1}
+        for i in range(len(nums)):
+            prefix_s+=nums[i]
+            rem=prefix_s%k
+            if rem in mpp:
+                if i-mpp[rem]>1:
+                    return True
+            else:
+                mpp[rem]=i
+        return False      
+          
+
