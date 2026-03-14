@@ -329,14 +329,27 @@ class Solution:
             left_s+=nums[i]
         return -1
     
-#Find the middle index in array (leetcode 1991)
+# 1991 Find the middle index in array 
 class Solution:
     def findMiddleIndex(self, nums: List[int]) -> int:
         total_s=sum(nums)
         left_s=0
-        for i in range(len(sum)):
+        for i in range(len(nums)):
             if left_s==total_s-left_s-nums[i]:
                 return i
             left_s+=nums[i]
         return -1
     
+# Product of Array Except Self (Leetcode 238)
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n=len(nums)
+        ans=[1]*n
+        for i in range(len(nums)):
+            ans[i]*=nums[i]
+        r=1
+        for i in range (n-1,-1,-1):
+            ans[i]*=r
+            r*=nums[i]
+        return ans
+
