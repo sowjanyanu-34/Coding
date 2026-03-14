@@ -377,5 +377,14 @@ class Solution:
             if nums[i]!=nums[i-1]:
                 nums[k]=nums[i]
                 k+=1
-            return k
+        return k
 
+# leetcode 27 Remove Element
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+       k=0
+       for i in range(len(nums)):
+           if nums[i]!=val:
+               nums[k]=nums[i]
+               k+=1
+        return k           
