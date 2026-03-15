@@ -53,4 +53,4 @@ Passionate about learning, problem-solving, and software development
 
 ---
 
-⭐ *This repository reflects my learning journey—one program at a time.*
+ *This repository reflects my learning journey—one program at a time.*
