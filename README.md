@@ -45,7 +45,7 @@ Programs are organized in a simple and readable manner for easy navigation.
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Sowjanya N U**
 Computer Science & Engineering Student
