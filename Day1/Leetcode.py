@@ -388,3 +388,19 @@ class Solution:
                nums[k]=nums[i]
                k+=1
         return k 
+
+# 977 Squares of a Sorted Array
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        n=len(nums)
+        res=[0]*n
+        h=0
+        t=n-1
+        for pos in range(n-1,-1,-1):
+            if abs(nums[h])>abs(nums[t]):
+                res[pos]=nums[h]*nums[h]
+                h+=1
+            else:
+                res[pos]=nums[t]*nums[t]
+                t-=1
+        return res
