@@ -41,7 +41,7 @@ Programs are organized in a simple and readable manner for easy navigation.
 
 *  This repository is **updated daily** with new programs
 *  Code is written with clarity and simplicity in mind
-* 🔄 Older programs may be refined as learning progresses
+*  Older programs may be refined as learning progresses
 
 ---
 
