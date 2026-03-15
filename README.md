@@ -37,7 +37,7 @@ Programs are organized in a simple and readable manner for easy navigation.
 
 ---
 
-## 🚀 Updates & Maintenance
+##  Updates & Maintenance
 
 * 📅 This repository is **updated daily** with new programs
 * 🧹 Code is written with clarity and simplicity in mind
