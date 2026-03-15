@@ -27,7 +27,7 @@ Programs are organized in a simple and readable manner for easy navigation.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 * Practice coding on a **daily basis**
 * Strengthen **core programming fundamentals**
@@ -37,15 +37,15 @@ Programs are organized in a simple and readable manner for easy navigation.
 
 ---
 
-## 🚀 Updates & Maintenance
+##  Updates & Maintenance
 
-* 📅 This repository is **updated daily** with new programs
-* 🧹 Code is written with clarity and simplicity in mind
-* 🔄 Older programs may be refined as learning progresses
+*  This repository is **updated daily** with new programs
+*  Code is written with clarity and simplicity in mind
+*  Older programs may be refined as learning progresses
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Sowjanya N U**
 Computer Science & Engineering Student
@@ -53,4 +53,4 @@ Passionate about learning, problem-solving, and software development
 
 ---
 
-⭐ *This repository reflects my learning journey—one program at a time.*
+ *This repository reflects my learning journey—one program at a time.*
