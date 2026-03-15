@@ -27,7 +27,7 @@ Programs are organized in a simple and readable manner for easy navigation.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 * Practice coding on a **daily basis**
 * Strengthen **core programming fundamentals**
