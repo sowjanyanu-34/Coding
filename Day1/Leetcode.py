@@ -43,13 +43,13 @@ class Solution:
 # Move Zeros (leetcode 283)
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
-        insertPos = 0
+        k = 0
 
         for i in range(len(nums)):
             if nums[i] != 0:
-                if i != insertPos:
-                    nums[i], nums[insertPos] = nums[insertPos], nums[i]
-                insertPos += 1
+                if i != k:
+                    nums[i], nums[k] = nums[k], nums[i]
+                k += 1
 
 # leetcode 680 Valid Palindrome II
 class Solution:
