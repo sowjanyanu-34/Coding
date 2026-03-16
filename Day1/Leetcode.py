@@ -139,7 +139,7 @@ class Solution:
             maxsum=max(maxsum,lsum+rsum)
         return maxsum
 
-#leetcode 904 Fruit Into Baskets
+# Fruit Into Baskets leetcode 904
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
         count={}
