@@ -1,5 +1,6 @@
 # Container With Most Water (Leetcode 11)
 from collections import Counter, defaultdict
+from turtle import right
 from typing import List
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
@@ -420,3 +421,23 @@ class Solution:
                 r-=1
             boat+=1
         return boat
+    
+#42 Trapping Rain Water
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        left=0
+        right=len(height)-1
+        left_max=height[left]
+        right_max=height[right]
+        water=0
+        while left<right:
+            if left_max<right_max:
+                left+=1
+                left_max=max(left_max,height[left])
+                water+=left_max-height[left]
+            else:
+                right-=1
+                right_max=max(right_max,height[right])
+                water+=right_max-height[right]
+        return water
+            
