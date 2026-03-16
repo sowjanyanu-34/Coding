@@ -1,56 +1,48 @@
-#  Coding – Daily Programming Practice
+Daily Coding Practice
+Overview
 
-##  Overview
+This repository contains my daily coding practice programs written in Python.
+The goal of this repository is to improve programming fundamentals, logical thinking, and problem-solving skills through consistent practice.
 
-This repository is a structured collection of my **daily coding practice programs**, focused on building strong problem-solving skills and maintaining consistency in programming.
+It serves as a personal learning record where I regularly add programs while learning and exploring different programming concepts.
 
-It serves as a personal learning log as well as a reference for revisiting core concepts while preparing for **interviews, exams, and technical assessments**.
+Repository Contents
 
----
+The repository currently includes practice programs related to:
 
-##  Repository Contents
+Python Basics – syntax, variables, and input/output
 
-The repository currently includes programs related to:
+Control Flow – conditional statements and loops
 
-*  **Python Basics** – syntax, variables, input/output
-*  **Control Statements** – loops, conditionals, and flow control
-*  **Data Structures** – lists, tuples, dictionaries, sets
-*  **Logical & Practice Problems** – problem-solving and thinking-based questions
+Basic Data Structures – lists, tuples, dictionaries, and sets
 
-Programs are organized in a simple and readable manner for easy navigation.
+Practice Problems – small logical and programming exercises
 
----
+Programs are kept simple and organized to make them easy to read and understand.
 
-##  Technologies Used
+Technology Used
 
-* **Python**
+Python
 
----
+Purpose
 
-##  Objectives
+Practice programming regularly
 
-* Practice coding on a **daily basis**
-* Strengthen **core programming fundamentals**
-* Improve **logical thinking and problem-solving ability**
-* Build **discipline and consistency** in learning
-* Prepare for **interviews, coding tests, and academics**
+Strengthen core coding fundamentals
 
----
+Improve problem-solving ability
 
-##  Updates & Maintenance
+Track learning progress over time
 
-*  This repository is **updated daily** with new programs
-*  Code is written with clarity and simplicity in mind
-*  Older programs may be refined as learning progresses
+Updates
 
----
+This repository is updated regularly with new practice programs.
 
-##  Author
+Some programs may be refined or improved as my understanding grows.
 
-**Sowjanya N U**
+Author
+
+Sowjanya N U
 Computer Science & Engineering Student
-Passionate about learning, problem-solving, and software development
 
----
-
- *This repository reflects my learning journey—one program at a time.*
+"Consistent practice is the key to becoming a better programmer."
