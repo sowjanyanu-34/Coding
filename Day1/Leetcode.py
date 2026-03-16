@@ -155,7 +155,7 @@ class Solution:
             max_fruits=max(max_fruits,r-l+1)
         return max_fruits
 
-# 643 Maximum Average Subarray I
+#  Maximum Average Subarray I leetcode 643
 class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:
         w=0
