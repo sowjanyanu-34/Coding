@@ -382,8 +382,8 @@ class Solution:
 # leetcode 27 Remove Element
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-       k=0
-       for i in range(len(nums)):
+        k=0
+        for i in range(len(nums)):
            if nums[i]!=val:
                nums[k]=nums[i]
                k+=1
@@ -404,3 +404,19 @@ class Solution:
                 res[pos]=nums[t]*nums[t]
                 t-=1
         return res
+
+# 881 Boats to Save People
+class Solution:
+    def numRescueBoats(self, people: List[int], limit: int) -> int:
+        people.sort()
+        l=0
+        r=len(people)-1
+        boat=0
+        while l<=r:
+            if people[l]+people[r]<=limit:
+                l+=1
+                r-=1
+            else:
+                r-=1
+            boat+=1
+        return boat
