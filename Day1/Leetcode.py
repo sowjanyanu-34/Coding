@@ -422,7 +422,7 @@ class Solution:
             boat+=1
         return boat
     
-#42 Trapping Rain Water
+#Trapping Rain Water leetcode 42
 class Solution:
     def trap(self, height: List[int]) -> int:
         left=0
