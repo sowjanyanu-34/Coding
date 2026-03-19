@@ -390,7 +390,7 @@ class Solution:
                k+=1
         return k 
 
-# 977 Squares of a Sorted Array
+# leetcode 977 Squares of a Sorted Array
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         n=len(nums)
