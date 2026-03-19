@@ -8,9 +8,9 @@ class Solution:
         for s in strs:
             key=''.join(sorted(s))
             group[key].append(s)
-        return list(group.value())
+        return list(group.values())
     
-#Valid anagram (Leetcode 242)
+#(Leetcode 242) Valid anagram 
 from collections import Counter
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
