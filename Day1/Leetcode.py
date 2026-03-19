@@ -16,7 +16,7 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         return Counter(s) == Counter(t)
     
-#Two Sum (Leetcode 1)
+#(Leetcode 1) Two Sum (Leetcode 1)
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         seen = {}   # number -> index
