@@ -457,4 +457,17 @@ class NumArray:
         
     def sumRange(self, left: int, right: int) -> int:
         return self.prefix[right+1]-self.prefix[left]
-        
+
+#leetcode 560 Subarray sum equals k
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        curr_sum=0
+        count=0
+        prefix_map={0:1}
+        for num in nums:
+            curr_sum+=num
+            if (curr_sum-k) in prefix_map:
+                count+=prefix_map[curr_sum-k]
+            prefix_map[curr_sum]=prefix_map.get(curr_sum,0)+1
+        return count
+
