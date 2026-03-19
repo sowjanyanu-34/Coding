@@ -406,7 +406,7 @@ class Solution:
                 t-=1
         return res
 
-# 881 Boats to Save People
+#  Boats to Save People leetcode 881
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people.sort()
