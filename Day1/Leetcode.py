@@ -448,7 +448,7 @@ class Solution:
             nums[i]=nums[i]+nums[i-1]
         return nums
  
- #303 leetcode Range Sum Query - Immutable
+ # Range Sum Query - Immutable 303 leetcode
 class NumArray:
     def __init__(self, nums: List[int]):
         self.prefix=[0]
