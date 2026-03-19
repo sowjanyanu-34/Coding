@@ -26,7 +26,7 @@ class Solution:
                 return [seen[complement], i]
             seen[num] = i
 
-#Two Sum II - Input Array Is Sorted (Leetcode 167)
+#(Leetcode 167) Two Sum II - Input Array Is Sorted (Leetcode 167)
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         l=0
