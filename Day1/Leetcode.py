@@ -441,7 +441,7 @@ class Solution:
                 water+=right_max-height[right]
         return water
 
-# Running Sum of 1d Array leetcode 1480
+# leetcode 1480 Running Sum of 1d Array leetcode 1480
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
         for i in range(1,len(nums)):
