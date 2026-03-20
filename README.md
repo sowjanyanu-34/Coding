@@ -43,6 +43,3 @@ Programs are kept simple and organized to make them easy to read and understand.
 **Sowjanya N U**  
 Computer Science & Engineering Student  
 
----
-
-*"Consistent practice is the key to becoming a better programmer."*
