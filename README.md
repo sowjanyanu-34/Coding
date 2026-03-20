@@ -39,7 +39,7 @@ Programs are kept simple and organized to make them easy to read and understand.
 
 ---
 
-## Author
+## Author:
 **Sowjanya N U**  
 Computer Science & Engineering Student  
 
