@@ -20,7 +20,7 @@ Programs are kept simple and organized to make them easy to read and understand.
 
 ---
 
-## Technology Used
+## Technology Used:
 - **Python**
 
 ---
