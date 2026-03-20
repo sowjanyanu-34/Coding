@@ -33,7 +33,7 @@ Programs are kept simple and organized to make them easy to read and understand.
 
 ---
 
-## Updates
+## Updates:
 - This repository is **updated regularly** with new practice programs.
 - Some programs may be **refined or improved** as my understanding grows.
 
