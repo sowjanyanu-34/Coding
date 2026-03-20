@@ -21,7 +21,7 @@ Programs are kept simple and organized to make them easy to read and understand.
 ---
 
 ## Technology Used:
-- **Python**
+- **Python3**
 
 ---
 
