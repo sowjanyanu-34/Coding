@@ -25,7 +25,7 @@ Programs are kept simple and organized to make them easy to read and understand.
 
 ---
 
-## Purpose
+## Purpose:
 - Practice programming **regularly**
 - Strengthen **core coding fundamentals**
 - Improve **problem-solving ability**
