@@ -475,15 +475,15 @@ class Solution:
 class Solution:
     def findMaxLength(self, nums: List[int]) -> int:
         curr_sum=0
-        max_len=0
+        max_length=0
         prefix_map={0:1}
         for i in range(len(nums)):
             if nums[i]==0:
-                curr_summ+=1
+                curr_sum+=1
             else:
                 curr_sum-=1
             if curr_sum in prefix_map:
-                max_len=max(max_len,i-prefix_map[curr_sum])
+                max_length=max(max_length,i-prefix_map[curr_sum])
             else:
                 prefix_map[curr_sum]=i
-        return max_len
+        return max_length
