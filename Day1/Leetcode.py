@@ -471,7 +471,7 @@ class Solution:
             prefix_map[curr_sum]=prefix_map.get(curr_sum,0)+1
         return count
 
-#  leetcode 525 Contiguous Array 
+#  (leetcode 525) Contiguous Array 
 class Solution:
     def findMaxLength(self, nums: List[int]) -> int:
         curr_sum=0
