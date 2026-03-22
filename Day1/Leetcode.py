@@ -477,8 +477,8 @@ class Solution:
         curr_sum=0
         max_length=0
         prefix_map={0:1}
-        for i in range(len(nums)):
-            if nums[i]==0:
+        for num in range(len(nums)):
+            if nums[num]==0:
                 curr_sum+=1
             else:
                 curr_sum-=1
