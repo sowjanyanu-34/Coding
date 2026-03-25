@@ -1,4 +1,4 @@
-# Leetcode 182 duplicate Emails
+# Leetcode 182 duplicate Emails:
 SELECT email as Email
 FROM person
 GROUP BY email
