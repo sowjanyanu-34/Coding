@@ -1,6 +1,6 @@
 # Daily Coding Practice:
 
-## Overview:
+## Overview
 This repository contains my **daily coding practice programs** written in Python.  
 The goal of this repository is to improve **programming fundamentals, logical thinking, and problem-solving skills** through consistent practice.
 
@@ -8,7 +8,7 @@ It serves as a **personal learning record** where I regularly add programs while
 
 ---
 
-## Repository Contents:
+## Repository Contents
 The repository currently includes practice programs related to:
 
 - **Python Basics** – syntax, variables, and input/output  
