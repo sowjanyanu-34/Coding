@@ -10,7 +10,7 @@ class Solution:
             group[key].append(s)
         return list(group.values())
     
-#(Leetcode 242) Valid anagram 
+#(Leetcode 242) Valid anagramm
 from collections import Counter
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
