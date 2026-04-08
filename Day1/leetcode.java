@@ -4,6 +4,7 @@
 package Daily_Coding.Day1;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -20,3 +21,15 @@ class Solution {
 }
 
 // Conatins duplicate (Leetcode 217)
+class Solution1 {
+    public boolean containsDuplicate(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            if (set.contains(num)) {
+                return true;
+            }
+            set.add(num);
+        }
+        return false;
+    }
+}
