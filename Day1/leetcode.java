@@ -1,3 +1,6 @@
+//Leetcode Hashing Pattern
+//Two Sum Problem (Leetcode 1)
+
 package Daily_Coding.Day1;
 
 import java.util.HashMap;
@@ -15,3 +18,5 @@ class Solution {
         return new int[] {};
     }
 }
+
+// Conatins duplicate (Leetcode 217)
