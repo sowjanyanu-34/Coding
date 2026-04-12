@@ -1,4 +1,4 @@
-//Leetcode Hashing Pattern
+//Leetcode Hashing Pattern(Easy,Medium)
 //Two Sum Problem (Leetcode 1)
 
 package Daily_Coding.Day1;
