@@ -5,11 +5,14 @@ package Daily_Coding.Day1;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i <= nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if (map.containsKey(complement)) {
                 return new int[] { map.get(complement), i };
@@ -125,5 +128,30 @@ class Solution6 {
             max_longest = Math.max(max_longest, right - left + 1);
         }
         return max_longest;
+    }
+}
+
+// Find all anagrams in a string (leetcode 438)
+class Solution7 {
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> result = new ArrayList<>();
+        if (s.length() < p.length())
+            return result;
+        int[] pCount = new int[26];
+        int[] sCount = new int[26];
+        for (char c : p.toCharArray()) {
+            pCount[c - 'a']++;
+        }
+        int window = p.length();
+        for (int i = 0; i < s.length(); i++) {
+            sCount[s.charAt(i) - 'a']++;
+            if (i >= window) {
+                sCount[s.charAt(i - window) - 'a']--;
+            }
+            if (Arrays.equals(pCount, sCount)) {
+                result.add(i - window + 1);
+            }
+        }
+        return result;
     }
 }
