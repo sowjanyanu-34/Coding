@@ -155,3 +155,6 @@ class Solution7 {
         return result;
     }
 }
+
+// Binary Search Pattern
+// Binary Search (Leetcode 704)
