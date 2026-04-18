@@ -198,8 +198,40 @@ class Solution9 {
     }
 }
 
+// leetcode 278
+
+class VersionControl {
+    boolean isBadVersion(int version) {
+        int bad = 4; // suppose 4 is first bad version
+        return version >= bad;
+    }
+}
+
+public class Solution10 extends VersionControl {
+    public int firstBadVersion(int n) {
+        int left = 1;
+        int right = n;
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+
+            if (isBadVersion(mid)) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+
+    public static void main(String[] args) {
+        Solution10 obj = new Solution10();
+        System.out.println(obj.firstBadVersion(10));
+    }
+}
+
 // Sqrt(x) (Leetcode 69)
-class Solution10 {
+class Solution11 {
     public int mySqrt(int x) {
         int left = 0;
         int right = x;
@@ -217,8 +249,42 @@ class Solution10 {
     }
 }
 
+// leetcode 33
+class Solution12 {
+    public int search(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            // Left half sorted
+            if (nums[left] <= nums[mid]) {
+                if (nums[left] <= target && target < nums[mid]) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            }
+            // Right half sorted
+            else {
+                if (nums[mid] < target && target <= nums[right]) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }
+
+        return -1;
+    }
+}
+
 // (leetcode 153)
-class Solution11 {
+class Solution13 {
     public int findMin(int[] nums) {
         int l = 0;
         int r = nums.length - 1;
