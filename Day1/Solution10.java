@@ -1,4 +1,4 @@
-//Leetcode Hashing Pattern(Easy,Medium,Hard)
+//Leetcode Hashing Pattern(Easy,Medium)
 //Two Sum Problem (Leetcode 1)
 
 package Daily_Coding.Day1;
@@ -184,7 +184,7 @@ class Solution9 {
         int left = 0;
         int right = nums.length - 1;
         while (left <= right) {
-            int mid = left = left + (right - left) / 2;
+            int mid = left + (right - left) / 2;
             if (nums[mid] == target) {
                 return mid;
             }
@@ -299,8 +299,6 @@ class Solution13 {
         return nums[l];
     }
 }
-<<<<<<< HEAD:leetcode.java
-=======
 
 //Find Peak Element (Leetcode 162)
 class Solution14 {
@@ -320,4 +318,3 @@ class Solution14 {
         return left;
     }
 }
->>>>>>> fd13ddf (Leetcode 1 in java added):Day1/Solution10.java
