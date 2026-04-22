@@ -300,7 +300,7 @@ class Solution13 {
     }
 }
 
-//Find Peak Element (Leetcode 162)
+// Find Peak Element (Leetcode 162)
 class Solution14 {
     public int findPeakElement(int[] nums) {
         int left = 0;
@@ -319,20 +319,22 @@ class Solution14 {
     }
 }
 
-//LEETCODE 189 Rotate Array
+// LEETCODE 189 Rotate Array
 class Solution15 {
     public void rotate(int[] nums, int k) {
-    k=k.nums.length;
-    reverse(nums,0,n-1);
-    reverse(nums,0,k-1);
-    reverse(nums,k,n-1);
+        int n = nums.length;
+        k = k % n;
+        reverse(nums, 0, n - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, n - 1);
     }
-    private void reverse(int[] nums,int start,int end){
-        while(start<end){
-            int temp=nums[start];
-            nums[start]=nums[end];
-            nums[end]=temp;
-            start++;    
+
+    private void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
             end--;
         }
     }
