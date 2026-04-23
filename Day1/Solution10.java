@@ -398,17 +398,17 @@ class Solution17 {
         for (int pile : piles) {
             right = Math.max(right, pile);
         }
-        int ans = 0;
+
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (canEat(piles, h, mid)) {
-                ans = mid;
+
                 right = mid - 1;
             } else {
                 left = mid + 1;
             }
         }
-        return ans;
+        return left;
     }
 
     private boolean canEat(int[] piles, int h, int k) {
