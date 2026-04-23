@@ -419,3 +419,37 @@ class Solution17 {
         return hours <= h;
     }
 }
+
+// 1011 Capacity To Ship Packages Within D Days
+class Solution18 {
+    public int shipWithinDays(int[] weights, int days) {
+        int l = 0;
+        int r = 0;
+        for (int w : weights) {
+            l = Math.max(l, w);
+            r += w;
+        }
+        while (l < r) {
+            int m = l + (r - l) / 2;
+            if (canShip(weights, days, m)) {
+                r = m;
+            } else {
+                l = m + 1;
+            }
+        }
+        return l;
+    }
+
+    private boolean canShip(int[] weights, int days, int cap) {
+        int dayCount = 1;
+        int currLoad = 0;
+        for (int w : weights) {
+            if (currLoad + w > cap) {
+                dayCount++;
+                currLoad = 0;
+            }
+            currLoad += w;
+        }
+        return dayCount <= days;
+    }
+}
