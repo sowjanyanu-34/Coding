@@ -494,17 +494,17 @@ class Solution20 {
         Arrays.sort(stalls);
         int l = 1;
         int r = stalls[stalls.length - 1] - stalls[0];
-        int ans = 0;
+        int answer = 0;
         while (l <= r) {
             int m = l + (r - l) / 2;
             if (canPlace(stalls, cows, m)) {
-                ans = m;
+                answer = m;
                 l = m + 1;
             } else {
                 r = m - 1;
             }
         }
-        return ans;
+        return answer;
     }
 
     private boolean canPlace(int[] stalls, int cows, int dist) {
