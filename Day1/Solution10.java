@@ -453,3 +453,37 @@ class Solution18 {
         return dayCount <= days;
     }
 }
+
+// 1870 Minimum Speed to Arrive on Time
+class Solution19 {
+    public int minSpeedOnTime(int[] dist, double hour) {
+        int n = dist.length;
+        if (n - 1 > hour)
+            return -1;
+        int l = 1;
+        int r = 10000000;
+        int ans = -1;
+        while (l <= r) {
+            int m = l + (r - l) / 2;
+            if (canReach(dist, hour, m)) {
+                ans = m;
+                r = m - 1;
+            } else {
+                l = m + 1;
+            }
+        }
+        return ans;
+    }
+
+    private boolean canReach(int[] dist, double hour, int speed) {
+        double time = 0.0;
+        for (int i = 0; i < dist.length; i++) {
+            double t = (double) dist[i] / speed;
+            if (i != dist.length - 1)
+                time += Math.ceil(t);
+            else
+                time += t;
+        }
+        return time <= hour;
+    }
+}
