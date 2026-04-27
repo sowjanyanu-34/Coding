@@ -519,3 +519,45 @@ class Solution20 {
         return cows >= count;
     }
 }
+
+// leetcode 1482 Minimum Number of Days to Make m Bouquets
+class Solution21 {
+    public int minDays(int[] bloomDay, int m, int k) {
+        if ((long) m * k > bloomDay.length)
+            return -1;
+        int l = Integer.MAX_VALUE;
+        int r = Integer.MIN_VALUE;
+        for (int d : bloomDay) {
+            l = Math.min(l, d);
+            r = Math.max(r, d);
+        }
+        int ans = -1;
+        while (l <= r) {
+            int min = l + (r - l) / 2;
+            if (canR(bloomDay, m, k, min)) {
+                ans = min;
+                r = min - 1;
+            } else {
+                l = min + 1;
+            }
+        }
+        return ans;
+    }
+
+    private boolean canR(int[] bloomDay, int m, int k, int day) {
+        int count = 0;
+        int bbb = 0;
+        for (int d : bloomDay) {
+            if (d <= day) {
+                count++;
+                if (count == k) {
+                    bbb++;
+                    count = 0;
+                }
+            } else {
+                count = 0;
+            }
+        }
+        return bbb >= m;
+    }
+}
