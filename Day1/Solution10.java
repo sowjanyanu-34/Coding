@@ -593,3 +593,49 @@ class Solution22 {
         return bbb >= m;
     }
 }
+
+// gfg Allocate minimum number of pages
+class Solution23 {
+    public int findPages(int[] arr, int k) {
+        int n = arr.length;
+        if (k > n)
+            return -1;
+        int l = 0;
+        int r = 0;
+        for (int pages : arr) {
+            l = Math.max(l, pages);
+            r += pages;
+        }
+        int ans = -1;
+        while (l <= r) {
+            int m = l + (r - 1) / 2;
+            if (canAllocate(arr, k, m)) {
+                ans = m;
+                r = m - 1;
+            } else {
+                l = m + 1;
+            }
+        }
+        return ans;
+    }
+
+    private static boolean canAllocate(int[] arr, int k, int maxpages) {
+        int student = 1;
+        int pagesum = 0;
+        for (int pages : arr) {
+            if (pagesum + pages <= maxpages) {
+                pagesum += pages;
+            } else {
+                student++;
+                pagesum = pages;
+            }
+        }
+        return student <= k;
+    }
+
+    public void main(String[] args) {
+        int arr[] = { 10, 20, 30, 40 };
+        int k = 2;
+        System.out.println(findPages(arr, k));
+    }
+}
