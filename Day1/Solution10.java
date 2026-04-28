@@ -608,7 +608,7 @@ class Solution23 {
         }
         int ans = -1;
         while (l <= r) {
-            int m = l + (r - 1) / 2;
+            int m = l + (r - l) / 2;
             if (canAllocate(arr, k, m)) {
                 ans = m;
                 r = m - 1;
