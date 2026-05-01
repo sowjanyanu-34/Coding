@@ -706,3 +706,15 @@ class Solution26 {
         return nums[l];
     }
 }
+
+// Recusrion + Backtracking pattern
+
+// gfg Factorial of a number
+class Solution27 {
+    int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+}
