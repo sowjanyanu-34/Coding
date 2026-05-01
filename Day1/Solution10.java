@@ -688,7 +688,7 @@ class Solution25 {
     }
 }
 
-// 2439 single element in a sorted array
+// 540 single element in a sorted array
 class Solution26 {
     public int singleNonDuplicate(int[] nums) {
         int l = 0;
