@@ -793,7 +793,7 @@ class Solution31 {
 
 // 90 leetcode Subsets II
 
-class Solution31 {
+class Solution32 {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums); // Step 1: sort
