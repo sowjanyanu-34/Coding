@@ -853,7 +853,7 @@ class Solution33 {
     }
 }
 
-// Stack Pattern
+// 1.Stack Pattern
 // leetcode 20 Valid Parentheses
 class Solution34 {
     public boolean isValid(String s) {
@@ -876,8 +876,34 @@ class Solution34 {
     }
 }
 
-// 1047 leetcode Remove All Adjacent Duplicates In String
+// 32 leetcode Longest Valid Parentheses
 class Solution35 {
+    public int longestValidParentheses(String s) {
+        Stack<Integer> stack = new Stack();
+        stack.push(-1);
+        int maxlen = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '(') {
+                stack.push(i);
+            } else {
+                stack.pop();
+                if (stack.isEmpty()) {
+                    stack.push(i);
+                } else {
+                    maxlen = Math.max(maxlen, i - stack.peek());
+                }
+            }
+        }
+        return maxlen;
+    }
+}
+
+// 2. Remove / Undo Simulation Stack
+// Definition: Stack helps remove adjacent duplicates or undo previous
+// operations because last inserted element is checked first.
+// 1047 leetcode Remove All Adjacent Duplicates In String
+class Solution36 {
     public String removeDuplicates(String s) {
         StringBuilder st = new StringBuilder();
         for (char ch : s.toCharArray()) {
