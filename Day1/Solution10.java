@@ -4,6 +4,7 @@
 package Daily_Coding.Day1;
 
 import java.util.HashMap;
+import java.util.Stack;
 import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
@@ -820,32 +821,57 @@ class Solution32 {
     }
 }
 
-//leetcode 46 Permutations
+// leetcode 46 Permutations
 
 class Solution33 {
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> ans= new ArrayList<>();
-        permute(0,nums,ans);
+        List<List<Integer>> ans = new ArrayList<>();
+        permute(0, nums, ans);
         return ans;
     }
-    private void permute(int index,int[] nums,List<List<Integer>> ans){
-       if(index==nums.length){
-        List<Integer> list=new ArrayList<>();
-        for(int num :nums){
-            list.add(num);
+
+    private void permute(int index, int[] nums, List<List<Integer>> ans) {
+        if (index == nums.length) {
+            List<Integer> list = new ArrayList<>();
+            for (int num : nums) {
+                list.add(num);
+            }
+            ans.add(list);
+            return;
         }
-        ans.add(list);
-        return;
-       }
-        for(int i=index;i<nums.length;i++){
-            swap(nums,i,index);
-            permute(index+1,nums,ans);
-            swap(nums,i,index);
+        for (int i = index; i < nums.length; i++) {
+            swap(nums, i, index);
+            permute(index + 1, nums, ans);
+            swap(nums, i, index);
         }
-       } 
-       private void swap(int [] nums,int i, int j){
-        int temp=nums[i];
-        nums[i]=nums[j];
-        nums[j]=temp;
-       }
     }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+}
+
+// Stack Pattern
+// leetcode 20 Valid Parentheses
+class Solution34 {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (char ch : s.toCharArray()) {
+            if (ch == '(' || ch == '{' || ch == '[') {
+                stack.push(ch);
+            } else {
+                if (stack.isEmpty())
+                    return false;
+                char top = stack.pop();
+                if ((ch == ')' && top != '(') ||
+                        (ch == '}' && top != '{') ||
+                        (ch == ']' && top != '[')) {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+}
