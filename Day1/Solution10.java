@@ -3,6 +3,8 @@
 
 package Daily_Coding.Day1;
 
+import java.util.Queue;
+import java.util.LinkedList;
 import java.util.HashMap;
 import java.util.Stack;
 import java.util.HashSet;
@@ -915,5 +917,37 @@ class Solution36 {
             }
         }
         return st.toString();
+    }
+}
+
+// 3. Design Stack / Queue Data Structure
+// Definition: Build one data structure using another to understand stack/queue
+// behavior deeply.
+
+// 225 leetcode Implement Stack using Queues
+class MyStack {
+    Queue<Integer> q;
+
+    public MyStack() {
+        q = new LinkedList<>();
+    }
+
+    public void push(int x) {
+        q.offer(x);
+        for (int i = 0; i < q.size() - 1; i++) {
+            q.offer(q.remove());
+        }
+    }
+
+    public int pop() {
+        return q.poll();
+    }
+
+    public int top() {
+        return q.peek();
+    }
+
+    public boolean Empty() {
+        return q.isEmpty();
     }
 }
