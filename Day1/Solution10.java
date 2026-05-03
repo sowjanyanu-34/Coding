@@ -984,3 +984,36 @@ class MyQueue {
         return in.isEmpty() && out.isEmpty();
     }
 }
+
+// 155 leetcode Min Stack
+class MyStack1 {
+    Stack<Integer> stack;
+    Stack<Integer> minstack;
+
+    public void MinStack() {
+        stack = new Stack<>();
+        minstack = new Stack<>();
+
+    }
+
+    public void push(int val) {
+        stack.push(val);
+        if (minstack.isEmpty() || val <= minstack.peek()) {
+            minstack.push(val);
+        }
+    }
+
+    public void pop() {
+        if (stack.pop().equals(minstack.peek())) {
+            minstack.pop();
+        }
+    }
+
+    public int top() {
+        return stack.peek();
+    }
+
+    public int getMin() {
+        return minstack.peek();
+    }
+}
