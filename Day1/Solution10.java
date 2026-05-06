@@ -1089,3 +1089,29 @@ class Solution39 {
         return ans;
     }
 }
+
+// online stack span leetcode 901 Online Stock Span
+
+class StockSpanner40 {
+
+    Stack<int[]> st; // each element = {price, span}
+
+    public StockSpanner40() {
+        st = new Stack<>();
+    }
+
+    public int next(int price) {
+        int span = 1;
+
+        // remove all smaller or equal prices
+        while (!st.isEmpty() && st.peek()[0] <= price) {
+            span += st.peek()[1];
+            st.pop();
+        }
+
+        // push current price and its span
+        st.push(new int[] { price, span });
+
+        return span;
+    }
+}
