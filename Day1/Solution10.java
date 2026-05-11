@@ -1118,7 +1118,7 @@ class StockSpanner40 {
 
 // leetcode 150 Evaluate Reverse Polish Notation
 
-// 394 leetcode Decode String
+// 394 Decode String
 class Solution41 {
     public String decodeString(String s) {
         Stack<Integer> countStack = new Stack<>();
