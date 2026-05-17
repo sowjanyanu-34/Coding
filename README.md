@@ -8,7 +8,8 @@ It serves as a **personal learning record** where I regularly add programs while
 
 ---
 
-##✅Repository Contents:
+## ✅Repository Contents:
+
 The repository currently includes practice programs related to:
 
 - **Python Basics** – syntax, variables, and input/output  
