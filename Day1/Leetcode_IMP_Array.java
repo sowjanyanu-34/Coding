@@ -63,7 +63,7 @@ class Solution4 {
 }
 
 // leetcode 977
-class Solution {
+class Solution5 {
     public int[] sortedSquares(int[] nums) {
 
         int left = 0;
@@ -90,5 +90,35 @@ class Solution {
         }
 
         return result;
+    }
+}
+
+// leetcode 11
+class Solution6 {
+    public int maxArea(int[] height) {
+
+        int left = 0;
+        int right = height.length - 1;
+
+        int maxArea = 0;
+
+        while (left < right) {
+
+            int width = right - left;
+
+            int minHeight = Math.min(height[left], height[right]);
+
+            int area = width * minHeight;
+
+            maxArea = Math.max(maxArea, area);
+
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxArea;
     }
 }
