@@ -1,3 +1,6 @@
+// Array pattern
+// Two pointers
+// leetcode 26
 class Solution1 {
     public int removeDuplicates(int[] nums) {
         int k = 1;
@@ -11,6 +14,7 @@ class Solution1 {
     }
 }
 
+// leetcode 27
 class Solution2 {
     public int removeElement(int[] nums, int val) {
         int k = 0;
