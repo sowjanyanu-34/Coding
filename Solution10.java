@@ -298,11 +298,9 @@ class Solution13 {
         }
         return nums[l];
     }
-}
-<<<<<<< HEAD:leetcode.java
-=======
+}<<<<<<<HEAD:leetcode.java=======
 
-//Find Peak Element (Leetcode 162)
+// Find Peak Element (Leetcode 162)
 class Solution14 {
     public int findPeakElement(int[] nums) {
         int left = 0;
@@ -319,5 +317,7 @@ class Solution14 {
         }
         return left;
     }
-}
->>>>>>> fd13ddf (Leetcode 1 in java added):Day1/Solution10.java
+}>>>>>>>fd13ddf(Leetcode 1
+
+in java added):Day1/Solution10.
+java

@@ -1,8 +1,6 @@
 //Leetcode Hashing Pattern(Easy,Medium,Hard)
 //Two Sum Problem (Leetcode 1)
 
-package Daily_Coding.Day1;
-
 import java.util.Queue;
 import java.util.LinkedList;
 import java.util.HashMap;

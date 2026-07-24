@@ -1,5 +1,4 @@
 # Array is an data structure which is a collection of elements stored contigously
-
 # 1.Maximum element in an array
 from operator import le
 
