@@ -93,13 +93,13 @@ class Solution5 {
     }
 }
 
-//leetcode 88
+// leetcode 88
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
-        int i = m - 1;              // Last valid element in nums1
-        int j = n - 1;              // Last element in nums2
-        int k = m + n - 1;          // Last position in nums1
+        int i = m - 1; // Last valid element in nums1
+        int j = n - 1; // Last element in nums2
+        int k = m + n - 1; // Last position in nums1
 
         while (i >= 0 && j >= 0) {
 
@@ -148,5 +148,34 @@ class Solution6 {
         }
 
         return maxArea;
+    }
+}
+
+// leetcode 42
+class Solution7 {
+    public int trap(int[] height) {
+
+        int left = 0;
+        int right = height.length - 1;
+
+        int leftMax = 0;
+        int rightMax = 0;
+        int water = 0;
+
+        while (left < right) {
+
+            leftMax = Math.max(leftMax, height[left]);
+            rightMax = Math.max(rightMax, height[right]);
+
+            if (leftMax < rightMax) {
+                water += leftMax - height[left];
+                left++;
+            } else {
+                water += rightMax - height[right];
+                right--;
+            }
+        }
+
+        return water;
     }
 }
