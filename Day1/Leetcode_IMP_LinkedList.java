@@ -1,4 +1,4 @@
-
+//Array to LL
 // Representation of a node
 class Node {
     int data;
@@ -20,5 +20,30 @@ class Solution {
             current = current.next;
         }
         return head;
+    }
+}
+
+// Search in LL
+class Node1 {
+    int data;
+    Node next;
+
+    Node1(int d) {
+        data = d;
+        next = null;
+    }
+}
+
+class Solution1 {
+    public boolean searchKey(Node head, int key) {
+        // Code here
+        Node curr = head;
+        while (curr != null) {
+            if (curr.data == key) {
+                return true;
+            }
+            curr = curr.next;
+        }
+        return false;
     }
 }
