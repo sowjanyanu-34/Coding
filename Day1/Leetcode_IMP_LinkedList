@@ -1,15 +1,4 @@
 //Array to LL
-// Representation of a node
-class Node {
-    int data;
-    Node next;
-
-    Node(int d) {
-        data = d;
-        next = null;
-    }
-};
-
 class Solution {
     public Node arrayToList(int arr[]) {
         // code here
@@ -24,16 +13,6 @@ class Solution {
 }
 
 // Search in LL
-class Node1 {
-    int data;
-    Node next;
-
-    Node1(int d) {
-        data = d;
-        next = null;
-    }
-}
-
 class Solution1 {
     public boolean searchKey(Node head, int key) {
         // Code here
@@ -49,17 +28,6 @@ class Solution1 {
 }
 
 // Linked list end insertion
-
-class Node2 {
-    int data;
-    Node next;
-
-    Node2(int x) {
-        data = x;
-        next = null;
-    }
-}
-
 class Solution2 {
     public Node insertAtEnd(Node head, int x) {
         // code here
