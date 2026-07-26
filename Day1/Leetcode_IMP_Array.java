@@ -244,7 +244,7 @@ class Solution10 {
 }
 
 // leetcode 485
-class Solution {
+class Solution11 {
     public int findMaxConsecutiveOnes(int[] nums) {
 
         int count = 0;
