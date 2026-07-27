@@ -32,15 +32,4 @@ Programs are kept simple and organized to make them easy to read and understand.
 - Improve **problem-solving ability**
 - Track **learning progress over time**
 
----
-
-## Updates:
-- This repository is **updated regularly** with new practice programs.
-- Some programs may be **refined or improved** as my understanding grows.
-
----
-
-## Author:
-**Sowjanya N U**  
-Computer Science & Engineering Student  
 
