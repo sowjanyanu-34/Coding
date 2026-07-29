@@ -268,3 +268,30 @@ class Solution {
         return dummy.next;
     }
 }
+
+//leetcode 61
+class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        if(head==null || head.next==null || k==0){
+            return head;
+        }
+        ListNode curr=head;
+        int length=1;
+        while(curr.next!=null){
+            curr=curr.next;
+            length++;
+        }
+        k=k%length;
+        if(k==0){
+            return head;
+        }
+        curr.next=head;
+        ListNode newCurr=head;
+        for(int i=0;i<length-k-1;i++){
+            newCurr=newCurr.next;
+        }
+        ListNode newHead=newCurr.next;
+        newCurr.next=null;
+        return newHead;
+    }
+}
