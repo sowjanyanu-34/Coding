@@ -141,7 +141,7 @@ public class Solution {
                 slow =head;
                 while(slow!=fast){
                     slow=slow.next;
-                    fast=fast.next
+                    fast=fast.next;
                 }
                 return slow;
             }
@@ -296,7 +296,7 @@ class Solution {
     }
 }
 
-//Merge pattern or sort pattern
+//Merge pattern or sort patternn
 //leetcode 21
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
@@ -385,3 +385,4 @@ class Solution {
         return dummy.next;
     }
 }
+
