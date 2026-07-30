@@ -420,7 +420,7 @@ class Solution {
     }
 }
 
-//leetcode 82
+//leetcode  82
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy=new ListNode (0);
