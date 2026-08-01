@@ -501,7 +501,7 @@ class Solution {
 }
 
 //leetcode linked list + hashmap and stack pattern 
-// leetcode 21
+// leetcode 2
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy=new ListNode(0);
