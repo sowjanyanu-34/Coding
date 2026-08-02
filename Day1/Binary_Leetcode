@@ -314,6 +314,7 @@ class Solution14 {
             } else {
                 left = mid + 1;
             }
+            
         }
         return left;
     }
