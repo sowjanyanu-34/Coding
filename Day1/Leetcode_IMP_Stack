@@ -1,0 +1,299 @@
+// 1.Stack Pattern
+// leetcode 20 Valid Parentheses
+class Solution34 {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (char ch : s.toCharArray()) {
+            if (ch == '(' || ch == '{' || ch == '[') {
+                stack.push(ch);
+            } else {
+                if (stack.isEmpty())
+                    return false;
+                char top = stack.pop();
+                if ((ch == ')' && top != '(') ||
+                        (ch == '}' && top != '{') ||
+                        (ch == ']' && top != '[')) {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+}
+
+// 32 leetcode Longest Valid Parentheses
+class Solution35 {
+    public int longestValidParentheses(String s) {
+        Stack<Integer> stack = new Stack();
+        stack.push(-1);
+        int maxlen = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '(') {
+                stack.push(i);
+            } else {
+                stack.pop();
+                if (stack.isEmpty()) {
+                    stack.push(i);
+                } else {
+                    maxlen = Math.max(maxlen, i - stack.peek());
+                }
+            }
+        }
+        return maxlen;
+    }
+}
+
+// 2. Remove / Undo Simulation Stack
+// Definition: Stack helps remove adjacent duplicates or undo previous
+// operations because last inserted element is checked first.
+// 1047 leetcode Remove All Adjacent Duplicates In String
+class Solution36 {
+    public String removeDuplicates(String s) {
+        StringBuilder st = new StringBuilder();
+        for (char ch : s.toCharArray()) {
+            int n = st.length();
+            if (n > 0 && st.charAt(n - 1) == ch) {
+                st.deleteCharAt(n - 1);
+            } else {
+                st.append(ch);
+            }
+        }
+        return st.toString();
+    }
+}
+
+// 3. Design Stack / Queue Data Structure
+// Definition: Build one data structure using another to understand stack/queue
+// behavior deeply.
+
+// 225 leetcode Implement Stack using Queues
+class MyStack {
+    Queue<Integer> q;
+
+    public MyStack() {
+        q = new LinkedList<>();
+    }
+
+    public void push(int x) {
+        q.offer(x);
+        for (int i = 0; i < q.size() - 1; i++) {
+            q.offer(q.remove());
+        }
+    }
+
+    public int pop() {
+        return q.poll();
+    }
+
+    public int top() {
+        return q.peek();
+    }
+
+    public boolean Empty() {
+        return q.isEmpty();
+    }
+}
+
+// 232 leetcode Implement Queue using Stacks
+class MyQueue {
+    Stack<Integer> in;
+    Stack<Integer> out;
+
+    public MyQueue() {
+        in = new Stack<>();
+        out = new Stack<>();
+    }
+
+    public void push(int x) {
+        in.push(x);
+    }
+
+    public int pop() {
+        peek();
+        return out.pop();
+    }
+
+    public int peek() {
+        if (out.isEmpty()) {
+            while (!in.isEmpty()) {
+                out.push(in.pop());
+            }
+        }
+        return out.peek();
+    }
+
+    public boolean empty() {
+        return in.isEmpty() && out.isEmpty();
+    }
+}
+
+// 155 leetcode Min Stack
+class MyStack1 {
+    Stack<Integer> stack;
+    Stack<Integer> minstack;
+
+    public void MinStack() {
+        stack = new Stack<>();
+        minstack = new Stack<>();
+
+    }
+
+    public void push(int val) {
+        stack.push(val);
+        if (minstack.isEmpty() || val <= minstack.peek()) {
+            minstack.push(val);
+        }
+    }
+
+    public void pop() {
+        if (stack.pop().equals(minstack.peek())) {
+            minstack.pop();
+        }
+    }
+
+    public int top() {
+        return stack.peek();
+    }
+
+    public int getMin() {
+        return minstack.peek();
+    }
+}
+
+// 496 leetcode Next Greater Element I
+
+class Solution37 {
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        Stack<Integer> stack = new Stack<>();
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int num : nums2) {
+
+            while (!stack.isEmpty() && stack.peek() < num) {
+                map.put(stack.pop(), num);
+            }
+
+            stack.push(num);
+        }
+
+        while (!stack.isEmpty()) {
+            map.put(stack.pop(), -1);
+        }
+
+        int[] result = new int[nums1.length];
+
+        for (int i = 0; i < nums1.length; i++) {
+            result[i] = map.get(nums1[i]);
+        }
+
+        return result;
+    }
+}
+
+// 503 leetcode Next Greater Element II
+class Solution38 {
+    public int[] nextGreaterElements(int[] nums) {
+        int n = nums.length;
+        int[] res = new int[n];
+        Arrays.fill(res, -1);
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < 2 * n; i++) {
+            int num = nums[i % n];
+            while (!stack.isEmpty() && nums[stack.peek()] < num) {
+                res[stack.pop()] = num;
+            }
+            if (i < n) {
+                stack.push(i);
+            }
+        }
+        return res;
+    }
+}
+
+// leetcode 739 Daily Temperatures
+class Solution39 {
+    public int[] dailyTemperatures(int[] temperatures) {
+        int n = temperatures.length;
+        int[] ans = new int[n];
+        Stack<Integer> st = new Stack<>();
+
+        for (int i = 0; i < n; i++) {
+
+            while (!st.isEmpty() && temperatures[st.peek()] < temperatures[i]) {
+                int prevIndex = st.pop();
+                ans[prevIndex] = i - prevIndex;
+            }
+
+            st.push(i);
+        }
+
+        return ans;
+    }
+}
+
+// online stack span leetcode 901 Online Stock Span
+
+class StockSpanner40 {
+
+    Stack<int[]> st; // each element = {price, span}
+
+    public StockSpanner40() {
+        st = new Stack<>();
+    }
+
+    public int next(int price) {
+        int span = 1;
+
+        // remove all smaller or equal prices
+        while (!st.isEmpty() && st.peek()[0] <= price) {
+            span += st.peek()[1];
+            st.pop();
+        }
+
+        // push current price and its span
+        st.push(new int[] { price, span });
+
+        return span;
+    }
+}
+
+// leetcode 150 Evaluate Reverse Polish Notation
+
+// 394 Decode String
+class Solution41 {
+    public String decodeString(String s) {
+        Stack<Integer> countStack = new Stack<>();
+        Stack<String> stringStack = new Stack<>();
+
+        String curr = "";
+        int num = 0;
+
+        for (char ch : s.toCharArray()) {
+
+            if (Character.isDigit(ch)) {
+                num = num * 10 + (ch - '0');
+            } else if (ch == '[') {
+                countStack.push(num);
+                stringStack.push(curr);
+
+                num = 0;
+                curr = "";
+            } else if (ch == ']') {
+                int repeat = countStack.pop();
+                String prev = stringStack.pop();
+
+                StringBuilder temp = new StringBuilder(prev);
+                for (int i = 0; i < repeat; i++) {
+                    temp.append(curr);
+                }
+
+                curr = temp.toString();
+            } else {
+                curr += ch;
+            }
+        }
+
+        return curr;
+    }
+}
