@@ -1,4 +1,21 @@
 // 1.Stack Pattern
+//leetcode 1047
+// 1047 leetcode Remove All Adjacent Duplicates In String
+class Solution36 {
+    public String removeDuplicates(String s) {
+        StringBuilder st = new StringBuilder();
+        for (char ch : s.toCharArray()) {
+            int n = st.length();
+            if (n > 0 && st.charAt(n - 1) == ch) {
+                st.deleteCharAt(n - 1);
+            } else {
+                st.append(ch);
+            }
+        }
+        return st.toString();
+    }
+}
+
 //leeetcode 844
 class Solution{
     public boolean backspaceCompare(String s, String t) {
@@ -64,24 +81,6 @@ class Solution35 {
     }
 }
 
-// 2. Remove / Undo Simulation Stack
-// Definition: Stack helps remove adjacent duplicates or undo previous
-// operations because last inserted element is checked first.
-// 1047 leetcode Remove All Adjacent Duplicates In String
-class Solution36 {
-    public String removeDuplicates(String s) {
-        StringBuilder st = new StringBuilder();
-        for (char ch : s.toCharArray()) {
-            int n = st.length();
-            if (n > 0 && st.charAt(n - 1) == ch) {
-                st.deleteCharAt(n - 1);
-            } else {
-                st.append(ch);
-            }
-        }
-        return st.toString();
-    }
-}
 
 // 3. Design Stack / Queue Data Structure
 // Definition: Build one data structure using another to understand stack/queue
