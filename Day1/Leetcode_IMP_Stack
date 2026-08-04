@@ -1,5 +1,7 @@
 // 1.Stack Pattern
 // leetcode 20 Valid Parentheses
+
+
 class Solution34 {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
