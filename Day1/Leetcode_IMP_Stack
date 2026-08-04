@@ -1,7 +1,25 @@
 // 1.Stack Pattern
+//leeetcode 844
+class Solution{
+    public boolean backspaceCompare(String s, String t) {
+        return build(s).equals(build(t));
+    }
+    private String build(String str){
+        StringBuilder st=new StringBuilder();
+        for(char ch :str.toCharArray()){
+            if(ch!='#'){
+                st.append(ch);
+            }
+            else if (st.length()>0){
+                st.deleteCharAt(st.length()-1);
+            }
+        }
+        return st.toString();
+    }
+}
+
+
 // leetcode 20 Valid Parentheses
-
-
 class Solution34 {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
