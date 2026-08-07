@@ -10,6 +10,19 @@ ON p.personId=a.personId;
 SELECT MAX(SALARY) AS SecondHighestSalary FROM EMPLOYEE WHERE SALARY<
 (SELECT MAX(SALARY) FROM EMPLOYEE);
 
+//leetcode 177
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+SET N=N-1;
+  RETURN (
+      # Write your MySQL query statement below.
+    SELECT DISTINCT SALARY 
+    FROM EMPLOYEE
+    ORDER BY SALARY
+    LIMIT 1 OFFSET N
+  );
+END
+
 #Leetcode 181 
 SELECT e.name AS Employee
 FROM Employee e
