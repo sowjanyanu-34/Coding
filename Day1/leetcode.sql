@@ -9,6 +9,11 @@ INNER JOIN
 Address a
 ON p.personId=a.personId;
 
+//LEETCODE 176
+# Write your MySQL query statement below
+SELECT MAX(SALARY) AS SecondHighestSalary FROM EMPLOYEE WHERE SALARY<
+(SELECT MAX(SALARY) FROM EMPLOYEE);
+
 #Leetcode 181 
 SELECT e.name AS Employee
 FROM Employee e
