@@ -1,9 +1,5 @@
 #175 Leetcode
-SELECT 
-p.firstname,
-p.lastname,
-a.city,
-a.state
+SELECT p.firstname,p.lastname,a.city,a.state
 FROM Person p
 INNER JOIN 
 Address a
