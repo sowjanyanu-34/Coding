@@ -80,6 +80,46 @@ class Solution {
     }
 }
 
+//543 leetcode
+class Solution {
+    int diameter=0;
+    public int diameterOfBinaryTree(TreeNode root) 
+{
+    height (root);
+    return diameter;
+        
+    }
+    public int height (TreeNode root){
+        if (root==null){
+            return 0;
+        }
+        int l=height (root.left);
+        int r=height (root.right);
+        diameter=Math.max(diameter,l+r);
+        return 1+Math.max(l,r);
+    }
+}
+
+//110 leetcode
+class Solution {
+    public boolean isBalanced(TreeNode root) {
+        return height (root)!=-1;
+    }
+    public int height (TreeNode root){
+        if(root==null)
+            return 0;
+        int left=height(root.left);
+        if(left==-1)
+            return -1;
+        int right=height(root.right);
+        if(right==-1)
+            return -1;
+        if(Math.abs(left-right)>1)
+            return -1;
+        return 1+Math.max(left, right );
+    }
+}
+
 //572 leetcode
 class Solution {
     private boolean isSameTree(TreeNode p,TreeNode q){
