@@ -1,4 +1,4 @@
-#  Daily Coding Practice
+#  ✅Daily Coding Practice
 
 ## Overview:
 This repository contains my **daily coding practice programs** written in Python.  
